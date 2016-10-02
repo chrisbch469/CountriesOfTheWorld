@@ -1,0 +1,100 @@
+.page-header{
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.table{
+    display: table;
+    margin: 0 auto;
+}
+
+ul#horizontal-list{
+    min-width: 696px;
+    list-style: none;
+    padding-top: 20px;
+}
+ul#horizontal-list li{
+    display: inline;
+    padding-right: 25px;
+}
+
+ul#horizontal-list li a{
+   text-decoration: none;
+    color: #206bdc;
+}
+
+ul#horizontal-list li a:visited {
+     text-decoration: none;
+}
+
+ul#horizontal-list li a:active {
+    text-decoration: none;
+}
+
+.countries{
+    margin: auto;
+}
+
+.country-list{
+    text-align: center;
+    list-style: none;
+}
+
+.country-list a{
+    text-decoration: none;
+    color: #206bdc;
+}
+
+.country-list a:visited{
+    text-decoration: none;
+}
+.country-list a:active{
+    text-decoration: none;
+}
+
+.country-name{
+    list-style: none;
+    padding: 10px;
+}
+
+.small-flag{
+    height: 90px;
+    width: 100px;
+    padding-bottom: 5px;
+}
+
+.large-flag{
+    width: 100%;
+    height: 100%;
+}
+.large-flag-container{
+    width:500px;
+    height:400px;
+}
+
+.details-header{
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 15px;
+}
+
+.details-list{
+    list-style: none;
+    text-align: left;
+}
+
+.return-home{
+    min-width: 696px;
+}
+.return-home a{
+    text-decoration: none;
+    color: #206bdc;
+    text-align: center;
+}
+
+.return-home a:visited{
+    text-decoration: none;
+}
+.return-home a:active{
+    text-decoration: none;
+}

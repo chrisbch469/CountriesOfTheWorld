@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+
+    <link rel="stylesheet" th:href="@{/app.css}" />
+
+    <title>Countries Of The World | Home</title>
+</head>
+<body>
+
+<header><h1>Countries of The World</h1></header>
+
+<div class="table">
+    <ul id="horizontal-list">
+        <li><a th:href="@{'/?sort=country-name-forward'}">Sort By Name - A to Z</a></li>
+        <li><a th:href="@{'/?sort=country-name-reverse'}">Sort By Name - Z to A</a></li>
+        <li><a th:href="@{'/?sort=country-population-ascending'}">Sort By Population - Low to High</a></li>
+        <li><a th:href="@{'/?sort=country-population-descending'}">Sort By Population - High to Low</a></li>
+    </ul>
+</div>
+
+<div th:each="country : ${countries}" class="countries">
+    <ul class="country-list">
+        <a th:href="@{'/' + ${country.countryName} + '/details'}">
+            <li th:text="${country.countryName}" class="country-name">Country Name</li>
+        </a>
+        <a th:href="@{'/' + ${country.countryName} + '/details'}">
+            <img th:src="@{'/flags/' + ${country.countryName} +'-Small.jpg'}" class="small-flag"/>
+        </a>
+    </ul>
+</div>
+
+</body>
+</html>

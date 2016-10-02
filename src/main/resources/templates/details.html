@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+
+    <link rel="stylesheet" th:href="@{/app.css}"/>
+
+    <title th:text="'' + ${country.countryName} + ' | Details'">Country Name | Details</title> <!--country name should be displayed-->
+</head>
+<body>
+
+<header th:text="${country.countryName} + ' Details'" class="page-header"><h1>Country Details</h1></header>
+
+<div class="large-flag-container">
+    <img th:src="@{'/flags/' + ${country.countryName} + '-Large.jpg'}" class="large-flag"/>
+</div>
+
+<div>
+    <ul class="details-list">
+        <li class="details-header">Population</li>
+        <li th:text="${country.formattedCountryPopulation}">Population Number</li>
+        <li class="details-header">Capital</li>
+        <li th:text="${country.countryCapital}">Capital Name</li>
+        <li class="details-header">Official Languages</li>
+            <ul>
+                <li th:text="${country.countryLanguage1}"> Language Name 1</li>
+                <li th:text="${country.countryLanguage2}"> Language Name 1</li>
+            </ul>
+    </ul>
+</div>
+
+<div class="return-home">
+    <a th:href="@{'/'}">Return Home</a>
+</div>
+
+</body>
+</html>
